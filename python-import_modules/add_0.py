@@ -9,5 +9,4 @@ def add(a, b):
     Returns:
         The return value. a + b
     """
-def add(a, b):
-    print(f"a + b = {a+b}".format(a, b)
+    return (a + b)
