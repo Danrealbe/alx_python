@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from add_0 import add
 
-def add(a, b):
+def add(a,b):
+
     """
         My addition function 
 
