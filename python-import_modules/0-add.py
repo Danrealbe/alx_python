@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-    """My addition function
+    """
+    My addition function
     Args:
         a: first integer
         b: second integer
