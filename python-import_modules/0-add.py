@@ -1,13 +1,5 @@
 #!/usr/bin/python3
-    """
-    My addition function
-    Args:
-        a: first integer
-        b: second integer
 
-    Returns:
-        The return value. a + b
-    """
 from add_0 import add
 
 if __name__ == "__main__":
