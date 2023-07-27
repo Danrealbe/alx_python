@@ -7,7 +7,7 @@
     Returns:
         The return value. a + b
     """
-from add_0 import add_0
+from add_0 import add
 
 if __name__ == "__main__":
      a = 1
