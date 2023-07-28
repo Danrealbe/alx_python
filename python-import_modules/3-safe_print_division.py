@@ -6,8 +6,8 @@ def safe_print_division(a, b):
         quote = a/b
 
     except ZeroDivisionErro:
-        quote = NONE
+        quote = None
 
     finally:
-        print("Inside result:{}".format(quote
+        print("Inside result:{}".format(quote))
     return quote 
