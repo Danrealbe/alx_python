@@ -3,5 +3,5 @@
 """raise exeption message""" 
 def raise_exception_msg(message=""):
 
-    raise Nameerror(message)
+    raise NameError(message)
 
