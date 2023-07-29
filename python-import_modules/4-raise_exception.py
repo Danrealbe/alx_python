@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-def raise_exception():
-
-    """"Raise a TypeError exception."""
-raise TypeError 
+if _name_=="_main_":
+    def raise_exception():
+        """"Raise a TypeError exception."""
+    raise TypeError 
