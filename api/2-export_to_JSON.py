@@ -1,30 +1,30 @@
 #!/usr/bin/python3
+""" 1-export_to_CSV
+
+    Export data in the CSV format.
 """
-place holder
-"""
+import csv
+import requests
+import sys
+
+
+def main():
+    """According to user_id, export information in CSV
+    """
+    user_id = sys.argv[1]
+    user = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
+    todos = 'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(
+        user_id)
+    name = requests.get(user).json().get('username')
+    request_todo = requests.get(todos).json()
+
+    with open('{}.csv'.format(user_id), 'w+') as file:
+        for todo in request_todo:
+            info = '"{}","{}","{}","{}"\n'.format(
+                user_id, name, todo.get('completed'), todo.get('title'))
+            file.write(info)
 
 
 if __name__ == "__main__":
-
-    import requests
-    from sys import argv
-    import json
-
-    if len(argv) < 2:
-        exit()
-    todos = requests.get(
-        "https://jsonplaceholder.typicode.com/todos?userId={}"
-        .format(argv[1]))
-    name = requests.get(
-        "https://jsonplaceholder.typicode.com/users?id={}".format(argv[1]))
-    name = name.json()
-    name = name[0]["username"]
-    todos = todos.json()
-    result = {}
-    result[argv[1]] = []
-    for todo in todos:
-        result[argv[1]].append(
-            {"task": todo["title"], "completed": todo["completed"],
-             "username": name})
-    with open("{}.json".format(argv[1]), 'w') as result_file:
-        json.dump(result, result_file)
+    if len(sys.argv) == 2:
+        main()
